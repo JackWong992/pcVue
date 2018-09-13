@@ -1,5 +1,7 @@
 # pcvue
-
+## 前置
+因为这个项目是vue2.3出来的时候写的，vuex的版本为2.3，没有完全实现比较完美的组件化。 公用组件之间放到App.vue里面所以
+目前已经在重写ing...
 > A Vue.js project
 
 ## Build Setup

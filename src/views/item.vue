@@ -6,12 +6,12 @@
 				<div class="gallery">
 					<div class="thumbnail">
 						<ul>
-							<li :class="{'on':index==0}" key="index" v-for="img,index in itemsInfo.ali_images"><img :src="img+'?x-oss-process=image/resize,w_54/quality,Q_90/format,webp'"></li>
+							<li :class="{'on':index==0}" :key="index" v-for="(img,index) in itemsInfo.ali_images"><img :src="img+'?x-oss-process=image/resize,w_54/quality,Q_90/format,webp'"></li>
 						</ul>
 					</div>
 					<div class="thumb">
 						<ul>
-							<li :class="{'on':index==0}" key="index" v-for="img,index in itemsInfo.ali_images"><img :src="img+'?x-oss-process=image/resize,w_440/quality,Q_90/format,webp'"></li>
+							<li :class="{'on':index==0}" :key="index" v-for="(img,index) in itemsInfo.ali_images"><img :src="img+'?x-oss-process=image/resize,w_440/quality,Q_90/format,webp'"></li>
 						</ul>
 					</div>
 				</div>
@@ -30,7 +30,8 @@
 					<div class="sku-dynamic-params clear">
 						<span class="params-name">颜色</span>
 						<ul class="params-colors">
-							<li :class="{'cur':color.id==$route.query.itemId}" v-for="color,index in itemsInfo.sku_list">
+							<li :class="{'cur':color.id==$route.query.itemId}" v-for="(color,index) in itemsInfo.sku_list"
+                            :key="index">
 								<router-link :to="{name: 'Item', query: {itemId:color.id}}" :title="color.color"><i><img :src="'http://img01.smartisanos.cn/'+color.image+'20X20.jpg'"></i></router-link>
 							</li>
 						</ul>

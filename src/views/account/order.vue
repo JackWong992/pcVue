@@ -40,7 +40,7 @@
 					</div>
 				</div>
 				<div class="js-list-inner">
-					<div class="box-inner order-cart order-list-cart clear" v-for="order,index in orderData">
+					<div class="box-inner order-cart order-list-cart clear" v-for="(order,index) in orderData" :key="index">
 						<div class="gray-sub-title cart-title">
 							<span class="date">{{order.iDate}}</span>
 							<span class="order-id"> 订单号： <a href="javascript:;">{{order.orderId}}</a> </span>
@@ -50,7 +50,7 @@
 							<span class="price">单价</span>
 						</div>
 						<div class="cart">
-							<div class="cart-items clear" v-for="item,index in order.goodsData">
+							<div class="cart-items clear" v-for="(item,index) in order.goodsData" :key="index">
 								<div class="prod-info clear">
 									<div class="items-thumb">
 										<a href="javascript:;" target="_blank"><img :src="item.ali_image+'?x-oss-process=image/resize,w_80/quality,Q_100/format,webp'"></a>

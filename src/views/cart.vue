@@ -21,7 +21,7 @@
 						<div class="cart-table">
 							<div class="cart-group">
 								<!--购物列表-->
-								<div class="cart-top-items" v-for="(item,index) in carPanelData">
+								<div class="cart-top-items" v-for="(item,index) in carPanelData" :key="index">
 									<div class="cart-items">
 										<div class="items-choose">
 											<span class="blue-checkbox-new" :class="{' checkbox-on':item.checked}" @click="checkGoodsHandle(item.sku_id)"><a></a></span>
